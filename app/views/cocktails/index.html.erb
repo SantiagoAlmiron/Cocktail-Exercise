@@ -1,0 +1,10 @@
+<h1 class="text-center">Your Cocktails</h1>
+<div class="row justify-content-center">
+  <ul class="list-group">
+    <% @cocktails.each do |cocktail| %>
+      <li class="list-group-item"><h3><strong><%= cocktail.name  %></strong></h3>
+      <%= link_to  "Ingredient Details", cocktail_path(cocktail.id) %>
+      </li>
+    <% end %>
+  </ul>
+</div>

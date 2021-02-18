@@ -1,0 +1,8 @@
+<h1 class="text-center"><%= @cocktail.name %></h1>
+<div class="row justify-content-center">
+  <ul class="list-group">
+    <% @cocktail.ingredients.each do |ingredient| %>
+      <li class="list-group-item"><h3><strong><%= ingredient.name  %></strong></h3></li>
+    <% end %>
+  </ul>
+</div>
