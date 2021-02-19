@@ -1,10 +1,16 @@
-<h1 class="text-center">Your Cocktails</h1>
+<h1 class="text-center p-3">Your Cocktails</h1>
+<div class="row justify-content-center pb-5">
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
+    <div class="d-flex justify-content-center"><%= f.button :submit, :class => "btn btn-primary" %></div>
+  <% end %>
+</div>
 <div class="row justify-content-center">
   <ul class="list-group">
     <% @cocktails.each do |cocktail| %>
-      <li class="list-group-item"><h3><strong><%= cocktail.name  %></strong></h3>
+      <div class="py-2"><li class="list-group-item shadow p-3 mb-5 rounded"><h3><strong><%= cocktail.name  %></strong></h3>
       <%= link_to  "Ingredient Details", cocktail_path(cocktail.id) %>
-      </li>
+      </li></div>
     <% end %>
   </ul>
 </div>

@@ -1,0 +1,9 @@
+<h1>Añadi un nuevo Ingrediente de la lista</h1>
+
+<div class="row justify-content-center pb-5">
+  <%= simple_form_for @dose do |f| %>
+    <%= f.input :description %>
+    <%= f.input :ingredient_id %>
+    <div class="d-flex justify-content-center"><%= f.button :submit, :class => "btn btn-primary" %></div>
+  <% end %>
+</div>
