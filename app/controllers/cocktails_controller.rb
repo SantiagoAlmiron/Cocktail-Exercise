@@ -16,14 +16,18 @@ class CocktailsController < ApplicationController
   end
 
   private
-
+  
+  def cocktail_params
+    params.require(:cocktail).permit(:name, :photo)
+  end
+  
   def selected
     @cocktail = Cocktail.find(params[:id])
   end
-
-  def cocktail_params
-    params.require(:cocktail).permit(:name)
-  end
+  
 end
 
+# def article_params
+#   params.require(:cocktail).permit(:title, :body, :photo)
+# end
 
